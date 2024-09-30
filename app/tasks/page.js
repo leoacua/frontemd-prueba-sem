@@ -38,7 +38,7 @@ export default function TasksPage() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h2>Gestión de Tareas</h2>
+      <h2>Sistemas de Gestión Administrativa De Tarea</h2>
       {/* Mostrar mensaje de carga mientras se obtienen las tareas */}
       {loading ? (
         <p>Cargando tareas...</p>
