@@ -14,7 +14,7 @@ const TaskList = () => {
   const fetchTasks = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5000/api/tareas');
+      const response = await axios.get('http://backend-sempx.vercel.app/api/tareas');
       setTasks(response.data);
       setLoading(false);
     } catch (error) {
@@ -31,7 +31,7 @@ const TaskList = () => {
   // Función para eliminar una tarea
   const onDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tareas/${id}`);
+      await axios.delete(`http://backend-sempx.vercel.app/api/tareas/${id}`);
       alert('Tarea eliminada correctamente');
       fetchTasks(); // Volver a obtener las tareas después de la eliminación
     } catch (error) {
@@ -47,7 +47,7 @@ const TaskList = () => {
       const descripcionEditada = prompt('Editar descripción de la tarea:', task.descripcion);
       if (descripcionEditada !== null && descripcionEditada.trim() !== '') {
         try {
-          await axios.put(`http://localhost:5000/api/tareas/${task._id}`, {
+          await axios.put(`http://backend-sempx.vercel.app/api/tareas/${task._id}`, {
             titulo: tituloEditado,
             descripcion: descripcionEditada,
           });
