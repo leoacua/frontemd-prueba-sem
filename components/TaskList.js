@@ -64,7 +64,7 @@ const TaskList = () => {
   // Función para cambiar el estado de una tarea
   const cambiarEstado = async (task) => {
     try {
-      await axios.put(`http://localhost:5000/api/tareas/${task._id}`, { estado: estadoTarea[task._id] || task.estado });
+      await axios.put(`http://backend-sempx.vercel.app/api/tareas/${task._id}`, { estado: estadoTarea[task._id] || task.estado });
       alert('Estado de la tarea actualizado correctamente');
       fetchTasks(); // Volver a obtener las tareas después de cambiar el estado
     } catch (error) {

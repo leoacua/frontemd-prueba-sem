@@ -14,7 +14,7 @@ const ReporteDeTareas = () => {
   // Función para obtener las tareas desde la API
   const obtenerTareas = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tareas');
+      const response = await axios.get('http://backend-sempx.vercel.app/api/tareas');
       setTareas(response.data); // Almacenar las tareas en el estado
       setLoading(false); // Desactivar el estado de cargado
     } catch (err) {
