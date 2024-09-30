@@ -34,7 +34,7 @@ const TaskForm = ({ onSubmit }) => {
       };
 
       // Hacer la solicitud POST a la API
-      const response = await axios.post('http://backend-sempx.vercel.app/api/tareas', nuevaTarea);
+      const response = await axios.post('https://backend-sempx.vercel.app/api/tareas', nuevaTarea);
 
       // Si la tarea se crea correctamente, mostrar mensaje de éxito
       setSuccessMessage('Tarea guardada con éxito.');
